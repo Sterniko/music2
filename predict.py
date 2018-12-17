@@ -13,7 +13,7 @@ def generate():
     print("Generate")
     """ Generate a piano midi file """
     #load the notes used to train the model
-    with open('data/notes', 'rb') as filepath:
+    with open('notes', 'rb') as filepath:
         notes = pickle.load(filepath)
 
     # Get all pitch names
