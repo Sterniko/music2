@@ -57,7 +57,8 @@ def prepare_sequences(notes, n_vocab):
     network_input = numpy.reshape(network_input, (n_patterns, sequence_length, 1))
     # normalize input
     network_input = network_input / float(n_vocab)
-
+    print("output:")
+    print(network_output)
     network_output = np_utils.to_categorical(network_output)
 
     return (network_input, network_output)
