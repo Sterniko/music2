@@ -33,7 +33,7 @@ def train_network():
 
 def prepare_sequences(notes, n_vocab):
     """ Prepare the sequences used by the Neural Network """
-    sequence_length = 100
+    sequence_length = 1
 
     # get all pitch names
     pitchnames = sorted(set(item for item in notes))
