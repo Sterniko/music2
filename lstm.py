@@ -98,7 +98,7 @@ def train(model, network_input, network_output):
 
     callbacks_list = [checkpoint,accuracy, TerminateOnNaN()]
 
-    history = model.fit(network_input, network_output, epochs=200, batch_size=64, callbacks=callbacks_list)
+    history = model.fit(network_input, network_output, epochs=10000, batch_size=64, callbacks=callbacks_list)
     print(history.history.keys)
 """checks wether the note has already been seen, adds it into seen ones if its new, also keeps track of number of appearances"""
 def appNotes(musicNote):
