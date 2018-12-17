@@ -20,7 +20,7 @@ def train_network():
     notes = parser()
 
     # get amount of pitch names
-    print(set(notes)
+    print(set(notes))
     n_vocab = len(set(notes))
 
     network_input, network_output = prepare_sequences(notes, n_vocab)
