@@ -17,7 +17,7 @@ notesCount= []
 
 def train_network():
     """ Train a Neural Network to generate music """
-    notes = get_notes()
+    notes = parser()
 
     # get amount of pitch names
     n_vocab = len(set(notes))
@@ -130,7 +130,7 @@ def parser():
         print(uniqueNotes[c], "amount: ", notesCount[c])
         counter += notesCount[c]
     print("Sum:       ", counter)
-    with open('data/notes', 'wb') as filepath:
+    with open('notes', 'wb') as filepath:
         pickle.dump(uniqueNotes, filepath)
     print(counter)
     return uniqueNotes
@@ -183,7 +183,7 @@ def get_notes():
             elif isinstance(element, chord.Chord):
                 notes.append('.'.join(str(n) for n in element.normalOrder))
 
-    with open('data/notes', 'wb') as filepath:
+    with open('notes', 'wb') as filepath:
         pickle.dump(notes, filepath)
     print(counter)
     return notes
