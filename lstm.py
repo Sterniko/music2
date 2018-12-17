@@ -21,7 +21,7 @@ def train_network():
 
     # get amount of pitch names
     print(set(notes))
-    print(str(music21.note.Rest))
+    print(str(note.Rest()))
     n_vocab = len(set(notes))
 
     network_input, network_output = prepare_sequences(notes, n_vocab)
