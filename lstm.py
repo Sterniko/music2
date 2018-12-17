@@ -18,10 +18,9 @@ notesCount= []
 def train_network():
     """ Train a Neural Network to generate music """
     notes = parser()
-
+    notes.append(str(note.Rest().fullName)))
     # get amount of pitch names
-    print(set(notes))
-    print(str(note.Rest().fullName))
+    print(set(notes))    
     n_vocab = len(set(notes))
 
     network_input, network_output = prepare_sequences(notes, n_vocab)
